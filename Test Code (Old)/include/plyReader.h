@@ -1,5 +1,5 @@
-#ifndef PlyReader_h
-#define PlyReader_h
+#ifndef plyReader_h
+#define plyReader_h
 
 #include <vector>
 #include <algorithm>
@@ -14,7 +14,7 @@
 #include <cstring>
 #include <regex>
 
-namespace PlyReader
+namespace plyReader
 {
 
 	template<typename T> T endian_swap(const T& v) { return v; }
@@ -37,7 +37,7 @@ namespace PlyReader
 	inline float endian_swap_float(const uint32_t& v) { union { float f; uint32_t i; }; i = endian_swap(v); return f; }
 	inline double endian_swap_double(const uint64_t& v) { union { double d; uint64_t i; }; i = endian_swap(v); return d; }
 
-	struct RR_3DLib_API DataCursor
+	struct DataCursor
 	{
 		void* vector;
 		uint8_t* data;
@@ -45,7 +45,7 @@ namespace PlyReader
 		bool realloc = false;
 	};
 
-	class RR_3DLib_API PlyProperty
+	class PlyProperty
 	{
 		void parse_internal(std::istream& is);
 	public:
@@ -198,7 +198,7 @@ namespace PlyReader
 		return -1;
 	}
 
-	class RR_3DLib_API PlyFile
+	class PlyFile
 	{
 
 	public:
@@ -367,4 +367,4 @@ namespace PlyReader
 
 }
 
-#endif // PlyReader_h
+#endif // plyReader_h

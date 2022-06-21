@@ -1,5 +1,8 @@
 # ObjectSegmentation
-Initial object segmentation algorithm for the paper entitled "Point Cloud Object Segmentation Using Multi Elevation-Layer 2D Bounding-Boxes".
+Object segmentation algorithm for the paper entitled "Point Cloud Object Segmentation Using Multi Elevation-Layer 2D Bounding-Boxes".
 Datasets for the algorithm are [here](https://drive.google.com/drive/folders/19LqO8CCk3psj-sYiiIkRaNssJYwTWVET?usp=sharing).
+Paper can be found [here](https://ieeexplore.ieee.org/document/9607400).
 
-Updates for the up-to-date code will be available after the release of the paper. 
+##To-Do:
+Add a Python script to download the necessary 3rd Part libraries (CCCoreLib, wxDir).
+Add a CMakeList
